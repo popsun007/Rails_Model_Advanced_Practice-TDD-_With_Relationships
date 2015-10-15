@@ -1,4 +1,5 @@
-require 'rails_helper'
+require 'spec_helper'
+
 RSpec.describe Post, type: :model do
   it 'requires a title' do
     post = Post.new(title: '')
@@ -29,6 +30,12 @@ RSpec.describe Post, type: :model do
       message2 = @post.messages.create(user: @user, author: 'Andrew Bynum', message: 'Zen grasshopper')
       expect(@post.messages).to include(message1)
       expect(@post.messages).to include(message2)
+    end
+    it 'has many comments' do
+      comment1 = @post.comments.create(comment: 'Comment 1')
+      comment2 = @post.comments.create(comment: 'Comment 2')
+      expect(@post.comments).to include(comment1)
+      expect(@post.comments).to include(comment2)
     end
   end
 end

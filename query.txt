@@ -1,0 +1,2025 @@
+Last login: Wed Oct 14 14:31:57 on ttys000
+Franks-iMac:~ Frank$ cd /Users/Frank/Desktop/CodingDojo/Rails/rails_models 
+Franks-iMac:rails_models Frank$ rails new blog_post_message --skip-test-unit
+      create  
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+         run  bundle install
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Resolving dependencies......
+Using rake 10.4.2
+Using i18n 0.7.0
+Using json 1.8.3
+Using minitest 5.8.1
+Using thread_safe 0.3.5
+Using tzinfo 1.2.2
+Using activesupport 4.1.8
+Using builder 3.2.2
+Using erubis 2.7.0
+Using actionview 4.1.8
+Using rack 1.5.5
+Using rack-test 0.6.3
+Using actionpack 4.1.8
+Using mime-types 2.6.2
+Using mail 2.6.3
+Using actionmailer 4.1.8
+Using activemodel 4.1.8
+Using arel 5.0.1.20140414130214
+Using activerecord 4.1.8
+Using bundler 1.10.6
+Using coffee-script-source 1.9.1.1
+Using execjs 2.6.0
+Using coffee-script 2.4.1
+Using thor 0.19.1
+Using railties 4.1.8
+Using coffee-rails 4.0.1
+Using hike 1.2.3
+Using multi_json 1.11.2
+Using jbuilder 2.3.2
+Using jquery-rails 3.1.4
+Using tilt 1.4.1
+Using sprockets 2.12.4
+Using sprockets-rails 2.3.3
+Using rails 4.1.8
+Using rdoc 4.2.0
+Using sass 3.2.19
+Using sass-rails 4.0.5
+Using sdoc 0.4.1
+Using spring 1.4.0
+Using sqlite3 1.3.11
+Using turbolinks 2.5.3
+Using uglifier 2.7.2
+Bundle complete! 10 Gemfile dependencies, 42 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+Franks-iMac:rails_models Frank$ cd blog_post_message/
+Franks-iMac:blog_post_message Frank$ sublime .
+Franks-iMac:blog_post_message Frank$ bundle install
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Could not find gem 'Hirb (>= 0) ruby' in any of the gem sources listed in your Gemfile or available
+on this machine.
+Franks-iMac:blog_post_message Frank$ bundle install
+Using rake 10.4.2
+Using i18n 0.7.0
+Using json 1.8.3
+Using minitest 5.8.1
+Using thread_safe 0.3.5
+Using tzinfo 1.2.2
+Using activesupport 4.1.8
+Using builder 3.2.2
+Using erubis 2.7.0
+Using actionview 4.1.8
+Using rack 1.5.5
+Using rack-test 0.6.3
+Using actionpack 4.1.8
+Using mime-types 2.6.2
+Using mail 2.6.3
+Using actionmailer 4.1.8
+Using activemodel 4.1.8
+Using arel 5.0.1.20140414130214
+Using activerecord 4.1.8
+Using coffee-script-source 1.9.1.1
+Using execjs 2.6.0
+Using coffee-script 2.4.1
+Using thor 0.19.1
+Using railties 4.1.8
+Using coffee-rails 4.0.1
+Using database_cleaner 1.5.0
+Using diff-lcs 1.2.5
+Using hike 1.2.3
+Using hirb 0.7.3
+Using multi_json 1.11.2
+Using jbuilder 2.3.2
+Using jquery-rails 3.1.4
+Using bundler 1.10.6
+Using tilt 1.4.1
+Using sprockets 2.12.4
+Using sprockets-rails 2.3.3
+Using rails 4.1.8
+Using rdoc 4.2.0
+Using rspec-support 3.3.0
+Using rspec-core 3.3.2
+Using rspec-expectations 3.3.1
+Using rspec-mocks 3.3.2
+Using rspec-rails 3.3.3
+Using sass 3.2.19
+Using sass-rails 4.0.5
+Using sdoc 0.4.1
+Using spring 1.4.0
+Using sqlite3 1.3.11
+Using turbolinks 2.5.3
+Using uglifier 2.7.2
+Bundle complete! 13 Gemfile dependencies, 50 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Franks-iMac:blog_post_message Frank$ touch upload.txt
+Franks-iMac:blog_post_message Frank$ open upload.txt 
+Franks-iMac:blog_post_message Frank$ rails rspec
+Error: Command 'rspec' not recognized
+Usage: rails COMMAND [ARGS]
+
+The most common rails commands are:
+ generate    Generate new code (short-cut alias: "g")
+ console     Start the Rails console (short-cut alias: "c")
+ server      Start the Rails server (short-cut alias: "s")
+ dbconsole   Start a console for the database specified in config/database.yml
+             (short-cut alias: "db")
+ new         Create a new Rails application. "rails new my_app" creates a
+             new application called MyApp in "./my_app"
+
+In addition to those, there are:
+ application  Generate the Rails application code
+ destroy      Undo code generated with "generate" (short-cut alias: "d")
+ plugin new   Generates skeleton for developing a Rails plugin
+ runner       Run a piece of code in the application environment (short-cut alias: "r")
+
+All commands can be run with -h (or --help) for more information.
+Franks-iMac:blog_post_message Frank$ rake rspec
+rake aborted!
+Don't know how to build task 'rspec'
+
+(See full trace by running task with --trace)
+Franks-iMac:blog_post_message Frank$ rake spec
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+FF.F**
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) Message add some examples to (or delete) /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message/spec/models/message_spec.rb
+     # Not yet implemented
+     # ./spec/models/message_spec.rb:4
+
+  2) Post add some examples to (or delete) /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message/spec/models/post_spec.rb
+     # Not yet implemented
+     # ./spec/models/post_spec.rb:4
+
+
+Failures:
+
+  1) Blog requires a name
+     Failure/Error: expect(blog.errors[:name].any?).to eq(true)
+       
+       expected: true
+            got: false
+       
+       (compared using ==)
+     # ./spec/models/blog_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  2) Blog requires a description
+     Failure/Error: expect(blog.errors[:description].any?).to eq(true)
+       
+       expected: true
+            got: false
+       
+       (compared using ==)
+     # ./spec/models/blog_spec.rb:11:in `block (2 levels) in <top (required)>'
+
+  3) Blog deletes associated posts upon deletion
+     Failure/Error: expect {
+       expected #count to have changed by -1, but was changed by 0
+     # ./spec/models/blog_spec.rb:23:in `block (2 levels) in <top (required)>'
+
+Finished in 0.11633 seconds (files took 1.24 seconds to load)
+6 examples, 3 failures, 2 pending
+
+Failed examples:
+
+rspec ./spec/models/blog_spec.rb:3 # Blog requires a name
+rspec ./spec/models/blog_spec.rb:8 # Blog requires a description
+rspec ./spec/models/blog_spec.rb:20 # Blog deletes associated posts upon deletion
+
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb failed
+Franks-iMac:blog_post_message Frank$ rake spec
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+FF.F
+
+Failures:
+
+  1) Blog requires a name
+     Failure/Error: expect(blog.errors[:name].any?).to eq(true)
+       
+       expected: true
+            got: false
+       
+       (compared using ==)
+     # ./spec/models/blog_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  2) Blog requires a description
+     Failure/Error: expect(blog.errors[:description].any?).to eq(true)
+       
+       expected: true
+            got: false
+       
+       (compared using ==)
+     # ./spec/models/blog_spec.rb:11:in `block (2 levels) in <top (required)>'
+
+  3) Blog deletes associated posts upon deletion
+     Failure/Error: expect {
+       expected #count to have changed by -1, but was changed by 0
+     # ./spec/models/blog_spec.rb:23:in `block (2 levels) in <top (required)>'
+
+Finished in 0.09634 seconds (files took 1.14 seconds to load)
+4 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/models/blog_spec.rb:3 # Blog requires a name
+rspec ./spec/models/blog_spec.rb:8 # Blog requires a description
+rspec ./spec/models/blog_spec.rb:20 # Blog deletes associated posts upon deletion
+
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb failed
+Franks-iMac:blog_post_message Frank$ rake spec
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+.F.F
+
+Failures:
+
+  1) Blog requires a description
+     Failure/Error: expect(blog.errors[:description].any?).to eq(true)
+       
+       expected: true
+            got: false
+       
+       (compared using ==)
+     # ./spec/models/blog_spec.rb:11:in `block (2 levels) in <top (required)>'
+
+  2) Blog deletes associated posts upon deletion
+     Failure/Error: expect {
+       expected #count to have changed by -1, but was changed by 0
+     # ./spec/models/blog_spec.rb:23:in `block (2 levels) in <top (required)>'
+
+Finished in 0.10157 seconds (files took 1.1 seconds to load)
+4 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/models/blog_spec.rb:8 # Blog requires a description
+rspec ./spec/models/blog_spec.rb:20 # Blog deletes associated posts upon deletion
+
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb failed
+Franks-iMac:blog_post_message Frank$ rake spec
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+/Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require': /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message/app/models/blog.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end (SyntaxError)
+  validates :name, :description presence: true
+                                        ^
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:348:in `require_or_load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:480:in `load_missing_constant'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:180:in `const_missing'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message/spec/models/blog_spec.rb:2:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1327:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1327:in `block in load_spec_files'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1325:in `each'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1325:in `load_spec_files'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:102:in `setup'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:88:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:73:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:41:in `invoke'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec:4:in `<main>'
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb failed
+Franks-iMac:blog_post_message Frank$ rake spec
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+...F
+
+Failures:
+
+  1) Blog deletes associated posts upon deletion
+     Failure/Error: expect {
+       expected #count to have changed by -1, but was changed by 0
+     # ./spec/models/blog_spec.rb:23:in `block (2 levels) in <top (required)>'
+
+Finished in 0.10146 seconds (files took 1.13 seconds to load)
+4 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/blog_spec.rb:20 # Blog deletes associated posts upon deletion
+
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb failed
+Franks-iMac:blog_post_message Frank$ rake spec
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+....
+
+Finished in 0.08527 seconds (files took 1.11 seconds to load)
+4 examples, 0 failures
+
+Franks-iMac:blog_post_message Frank$ rake spec
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+....FF..
+
+Failures:
+
+  1) Post requires a title to be at least 7 characters long
+     Failure/Error: expect(post.errors[:title].any?).to eq(true)
+       
+       expected: true
+            got: false
+       
+       (compared using ==)
+     # ./spec/models/post_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  2) Post requires content
+     Failure/Error: expect(post.errors[:content].any?).to eq(true)
+       
+       expected: true
+            got: false
+       
+       (compared using ==)
+     # ./spec/models/post_spec.rb:13:in `block (2 levels) in <top (required)>'
+
+Finished in 0.12847 seconds (files took 1.13 seconds to load)
+8 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/models/post_spec.rb:3 # Post requires a title to be at least 7 characters long
+rspec ./spec/models/post_spec.rb:9 # Post requires content
+
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb failed
+Franks-iMac:blog_post_message Frank$ rake spec
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+....F...
+
+Failures:
+
+  1) Post requires a title to be at least 7 characters long
+     Failure/Error: expect(post.errors[:title].any?).to eq(true)
+       
+       expected: true
+            got: false
+       
+       (compared using ==)
+     # ./spec/models/post_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+Finished in 0.12921 seconds (files took 1.1 seconds to load)
+8 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/post_spec.rb:3 # Post requires a title to be at least 7 characters long
+
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb failed
+Franks-iMac:blog_post_message Frank$ rake spec
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+........
+
+Finished in 0.11557 seconds (files took 1.13 seconds to load)
+8 examples, 0 failures
+
+Franks-iMac:blog_post_message Frank$ rake spec
+/Users/Frank/.rvm/rubies/ruby-2.2.1/bin/ruby -I/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/lib:/Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-support-3.3.0/lib /Users/Frank/.rvm/gems/ruby-2.2.1/gems/rspec-core-3.3.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+...........
+
+Finished in 0.13226 seconds (files took 1.14 seconds to load)
+11 examples, 0 failures
+
+Franks-iMac:blog_post_message Frank$ cd ..
+Franks-iMac:rails_models Frank$ zip -r blog_post_message blog_post_message/
+  adding: blog_post_message/ (stored 0%)
+  adding: blog_post_message/.gitignore (deflated 40%)
+  adding: blog_post_message/.rspec (stored 0%)
+  adding: blog_post_message/app/ (stored 0%)
+  adding: blog_post_message/app/assets/ (stored 0%)
+  adding: blog_post_message/app/assets/images/ (stored 0%)
+  adding: blog_post_message/app/assets/images/.keep (stored 0%)
+  adding: blog_post_message/app/assets/javascripts/ (stored 0%)
+  adding: blog_post_message/app/assets/javascripts/application.js (deflated 44%)
+  adding: blog_post_message/app/assets/stylesheets/ (stored 0%)
+  adding: blog_post_message/app/assets/stylesheets/application.css (deflated 48%)
+  adding: blog_post_message/app/controllers/ (stored 0%)
+  adding: blog_post_message/app/controllers/application_controller.rb (deflated 26%)
+  adding: blog_post_message/app/controllers/concerns/ (stored 0%)
+  adding: blog_post_message/app/controllers/concerns/.keep (stored 0%)
+  adding: blog_post_message/app/helpers/ (stored 0%)
+  adding: blog_post_message/app/helpers/application_helper.rb (stored 0%)
+  adding: blog_post_message/app/mailers/ (stored 0%)
+  adding: blog_post_message/app/mailers/.keep (stored 0%)
+  adding: blog_post_message/app/models/ (stored 0%)
+  adding: blog_post_message/app/models/.keep (stored 0%)
+  adding: blog_post_message/app/models/blog.rb (deflated 15%)
+  adding: blog_post_message/app/models/concerns/ (stored 0%)
+  adding: blog_post_message/app/models/concerns/.keep (stored 0%)
+  adding: blog_post_message/app/models/message.rb (deflated 12%)
+  adding: blog_post_message/app/models/post.rb (deflated 27%)
+  adding: blog_post_message/app/views/ (stored 0%)
+  adding: blog_post_message/app/views/layouts/ (stored 0%)
+  adding: blog_post_message/app/views/layouts/application.html.erb (deflated 38%)
+  adding: blog_post_message/bin/ (stored 0%)
+  adding: blog_post_message/bin/bundle (deflated 12%)
+  adding: blog_post_message/bin/rails (deflated 28%)
+  adding: blog_post_message/bin/rake (deflated 16%)
+  adding: blog_post_message/bin/spring (deflated 34%)
+  adding: blog_post_message/config/ (stored 0%)
+  adding: blog_post_message/config/application.rb (deflated 48%)
+  adding: blog_post_message/config/boot.rb (deflated 20%)
+  adding: blog_post_message/config/database.yml (deflated 50%)
+  adding: blog_post_message/config/environment.rb (deflated 33%)
+  adding: blog_post_message/config/environments/ (stored 0%)
+  adding: blog_post_message/config/environments/development.rb (deflated 53%)
+  adding: blog_post_message/config/environments/production.rb (deflated 56%)
+  adding: blog_post_message/config/environments/test.rb (deflated 53%)
+  adding: blog_post_message/config/initializers/ (stored 0%)
+  adding: blog_post_message/config/initializers/assets.rb (deflated 42%)
+  adding: blog_post_message/config/initializers/backtrace_silencers.rb (deflated 42%)
+  adding: blog_post_message/config/initializers/cookies_serializer.rb (deflated 15%)
+  adding: blog_post_message/config/initializers/filter_parameter_logging.rb (deflated 27%)
+  adding: blog_post_message/config/initializers/inflections.rb (deflated 49%)
+  adding: blog_post_message/config/initializers/mime_types.rb (deflated 20%)
+  adding: blog_post_message/config/initializers/session_store.rb (deflated 19%)
+  adding: blog_post_message/config/initializers/wrap_parameters.rb (deflated 41%)
+  adding: blog_post_message/config/locales/ (stored 0%)
+  adding: blog_post_message/config/locales/en.yml (deflated 45%)
+  adding: blog_post_message/config/routes.rb (deflated 65%)
+  adding: blog_post_message/config/secrets.yml (deflated 39%)
+  adding: blog_post_message/config.ru (deflated 16%)
+  adding: blog_post_message/db/ (stored 0%)
+  adding: blog_post_message/db/development.sqlite3 (deflated 96%)
+  adding: blog_post_message/db/migrate/ (stored 0%)
+  adding: blog_post_message/db/migrate/20151014225140_create_blogs.rb (deflated 29%)
+  adding: blog_post_message/db/migrate/20151014225210_create_posts.rb (deflated 33%)
+  adding: blog_post_message/db/migrate/20151014225251_create_messages.rb (deflated 35%)
+  adding: blog_post_message/db/schema.rb (deflated 57%)
+  adding: blog_post_message/db/seeds.rb (deflated 36%)
+  adding: blog_post_message/db/test.sqlite3 (deflated 98%)
+  adding: blog_post_message/Gemfile (deflated 53%)
+  adding: blog_post_message/Gemfile.lock (deflated 71%)
+  adding: blog_post_message/lib/ (stored 0%)
+  adding: blog_post_message/lib/assets/ (stored 0%)
+  adding: blog_post_message/lib/assets/.keep (stored 0%)
+  adding: blog_post_message/lib/tasks/ (stored 0%)
+  adding: blog_post_message/lib/tasks/.keep (stored 0%)
+  adding: blog_post_message/log/ (stored 0%)
+  adding: blog_post_message/log/.keep (stored 0%)
+  adding: blog_post_message/log/development.log (deflated 86%)
+  adding: blog_post_message/log/test.log (deflated 96%)
+  adding: blog_post_message/public/ (stored 0%)
+  adding: blog_post_message/public/404.html (deflated 58%)
+  adding: blog_post_message/public/422.html (deflated 58%)
+  adding: blog_post_message/public/500.html (deflated 58%)
+  adding: blog_post_message/public/favicon.ico (stored 0%)
+  adding: blog_post_message/public/robots.txt (deflated 28%)
+  adding: blog_post_message/Rakefile (deflated 27%)
+  adding: blog_post_message/README.rdoc (deflated 36%)
+  adding: blog_post_message/spec/ (stored 0%)
+  adding: blog_post_message/spec/models/ (stored 0%)
+  adding: blog_post_message/spec/models/blog_spec.rb (deflated 64%)
+  adding: blog_post_message/spec/models/message_spec.rb (deflated 69%)
+  adding: blog_post_message/spec/models/post_spec.rb (deflated 67%)
+  adding: blog_post_message/spec/rails_helper.rb (deflated 55%)
+  adding: blog_post_message/spec/spec_helper.rb (deflated 54%)
+  adding: blog_post_message/tmp/ (stored 0%)
+  adding: blog_post_message/tmp/cache/ (stored 0%)
+  adding: blog_post_message/tmp/cache/assets/ (stored 0%)
+  adding: blog_post_message/upload.txt (deflated 94%)
+  adding: blog_post_message/vendor/ (stored 0%)
+  adding: blog_post_message/vendor/assets/ (stored 0%)
+  adding: blog_post_message/vendor/assets/javascripts/ (stored 0%)
+  adding: blog_post_message/vendor/assets/javascripts/.keep (stored 0%)
+  adding: blog_post_message/vendor/assets/stylesheets/ (stored 0%)
+  adding: blog_post_message/vendor/assets/stylesheets/.keep (stored 0%)
+Franks-iMac:rails_models Frank$ cd blog_post_message
+Franks-iMac:blog_post_message Frank$ git init
+Initialized empty Git repository in /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message/.git/
+Franks-iMac:blog_post_message Frank$ git add .
+Franks-iMac:blog_post_message Frank$ git commit -m"Validation pratice and query practice"
+[master (root-commit) a7ed13c] Validation pratice and query practice
+ 63 files changed, 3762 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .rspec
+ create mode 100644 Gemfile
+ create mode 100644 Gemfile.lock
+ create mode 100644 README.rdoc
+ create mode 100644 Rakefile
+ create mode 100644 app/assets/images/.keep
+ create mode 100644 app/assets/javascripts/application.js
+ create mode 100644 app/assets/stylesheets/application.css
+ create mode 100644 app/controllers/application_controller.rb
+ create mode 100644 app/controllers/concerns/.keep
+ create mode 100644 app/helpers/application_helper.rb
+ create mode 100644 app/mailers/.keep
+ create mode 100644 app/models/.keep
+ create mode 100644 app/models/blog.rb
+ create mode 100644 app/models/concerns/.keep
+ create mode 100644 app/models/message.rb
+ create mode 100644 app/models/post.rb
+ create mode 100644 app/views/layouts/application.html.erb
+ create mode 100755 bin/bundle
+ create mode 100755 bin/rails
+ create mode 100755 bin/rake
+ create mode 100755 bin/spring
+ create mode 100644 config.ru
+ create mode 100644 config/application.rb
+ create mode 100644 config/boot.rb
+ create mode 100644 config/database.yml
+ create mode 100644 config/environment.rb
+ create mode 100644 config/environments/development.rb
+ create mode 100644 config/environments/production.rb
+ create mode 100644 config/environments/test.rb
+ create mode 100644 config/initializers/assets.rb
+ create mode 100644 config/initializers/backtrace_silencers.rb
+ create mode 100644 config/initializers/cookies_serializer.rb
+ create mode 100644 config/initializers/filter_parameter_logging.rb
+ create mode 100644 config/initializers/inflections.rb
+ create mode 100644 config/initializers/mime_types.rb
+ create mode 100644 config/initializers/session_store.rb
+ create mode 100644 config/initializers/wrap_parameters.rb
+ create mode 100644 config/locales/en.yml
+ create mode 100644 config/routes.rb
+ create mode 100644 config/secrets.yml
+ create mode 100644 db/migrate/20151014225140_create_blogs.rb
+ create mode 100644 db/migrate/20151014225210_create_posts.rb
+ create mode 100644 db/migrate/20151014225251_create_messages.rb
+ create mode 100644 db/schema.rb
+ create mode 100644 db/seeds.rb
+ create mode 100644 lib/assets/.keep
+ create mode 100644 lib/tasks/.keep
+ create mode 100644 log/.keep
+ create mode 100644 public/404.html
+ create mode 100644 public/422.html
+ create mode 100644 public/500.html
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/robots.txt
+ create mode 100644 spec/models/blog_spec.rb
+ create mode 100644 spec/models/message_spec.rb
+ create mode 100644 spec/models/post_spec.rb
+ create mode 100644 spec/rails_helper.rb
+ create mode 100644 spec/spec_helper.rb
+ create mode 100644 upload.txt
+ create mode 100644 vendor/assets/javascripts/.keep
+ create mode 100644 vendor/assets/stylesheets/.keep
+Franks-iMac:blog_post_message Frank$ git remote add origin git@github.com:popsun007/Rails_Model_Practice3_TDD_Blog_Post_Message_Relationship.git
+Franks-iMac:blog_post_message Frank$ git push origin master
+Counting objects: 78, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (67/67), done.
+Writing objects: 100% (78/78), 34.44 KiB | 0 bytes/s, done.
+Total 78 (delta 3), reused 0 (delta 0)
+To git@github.com:popsun007/Rails_Model_Practice3_TDD_Blog_Post_Message_Relationship.git
+ * [new branch]      master -> master
+Franks-iMac:blog_post_message Frank$ git add .
+Franks-iMac:blog_post_message Frank$ git commit -m "Update Readme file"
+[master caf9df6] Update Readme file
+ 2 files changed, 2 insertions(+), 28 deletions(-)
+ rewrite README.rdoc (100%)
+ rename upload.txt => query.txt (100%)
+Franks-iMac:blog_post_message Frank$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 359 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To git@github.com:popsun007/Rails_Model_Practice3_TDD_Blog_Post_Message_Relationship.git
+   a7ed13c..caf9df6  master -> master
+Franks-iMac:blog_post_message Frank$ cd ..
+Franks-iMac:rails_models Frank$ ls
+basic_i			blog_post_message	dojo_ninjas
+basic_i.zip		blog_post_message.zip	migration_practice
+Franks-iMac:rails_models Frank$ rails new blog_post_message_2 --skip-test-unit
+      create  
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+         run  bundle install
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Resolving dependencies......
+Using rake 10.4.2
+Using i18n 0.7.0
+Using json 1.8.3
+Using minitest 5.8.1
+Using thread_safe 0.3.5
+Using tzinfo 1.2.2
+Using activesupport 4.1.8
+Using builder 3.2.2
+Using erubis 2.7.0
+Using actionview 4.1.8
+Using rack 1.5.5
+Using rack-test 0.6.3
+Using actionpack 4.1.8
+Using mime-types 2.6.2
+Using mail 2.6.3
+Using actionmailer 4.1.8
+Using activemodel 4.1.8
+Using arel 5.0.1.20140414130214
+Using activerecord 4.1.8
+Using bundler 1.10.6
+Using coffee-script-source 1.9.1.1
+Using execjs 2.6.0
+Using coffee-script 2.4.1
+Using thor 0.19.1
+Using railties 4.1.8
+Using coffee-rails 4.0.1
+Using hike 1.2.3
+Using multi_json 1.11.2
+Using jbuilder 2.3.2
+Using jquery-rails 3.1.4
+Using tilt 1.4.1
+Using sprockets 2.12.4
+Using sprockets-rails 2.3.3
+Using rails 4.1.8
+Using rdoc 4.2.0
+Using sass 3.2.19
+Using sass-rails 4.0.5
+Using sdoc 0.4.1
+Using spring 1.4.0
+Using sqlite3 1.3.11
+Using turbolinks 2.5.3
+Using uglifier 2.7.2
+Bundle complete! 10 Gemfile dependencies, 42 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+Franks-iMac:rails_models Frank$ ls
+basic_i			blog_post_message	blog_post_message_2	migration_practice
+basic_i.zip		blog_post_message.zip	dojo_ninjas
+Franks-iMac:rails_models Frank$ cd blog_post_message_2/
+Franks-iMac:blog_post_message_2 Frank$ git init
+Initialized empty Git repository in /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/.git/
+Franks-iMac:blog_post_message_2 Frank$ git add .
+Franks-iMac:blog_post_message_2 Frank$ git commit -m"Initial Commit"
+[master (root-commit) 6348bb5] Initial Commit
+ 49 files changed, 892 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Gemfile
+ create mode 100644 Gemfile.lock
+ create mode 100644 README.rdoc
+ create mode 100644 Rakefile
+ create mode 100644 app/assets/images/.keep
+ create mode 100644 app/assets/javascripts/application.js
+ create mode 100644 app/assets/stylesheets/application.css
+ create mode 100644 app/controllers/application_controller.rb
+ create mode 100644 app/controllers/concerns/.keep
+ create mode 100644 app/helpers/application_helper.rb
+ create mode 100644 app/mailers/.keep
+ create mode 100644 app/models/.keep
+ create mode 100644 app/models/concerns/.keep
+ create mode 100644 app/views/layouts/application.html.erb
+ create mode 100755 bin/bundle
+ create mode 100755 bin/rails
+ create mode 100755 bin/rake
+ create mode 100755 bin/spring
+ create mode 100644 config.ru
+ create mode 100644 config/application.rb
+ create mode 100644 config/boot.rb
+ create mode 100644 config/database.yml
+ create mode 100644 config/environment.rb
+ create mode 100644 config/environments/development.rb
+ create mode 100644 config/environments/production.rb
+ create mode 100644 config/environments/test.rb
+ create mode 100644 config/initializers/assets.rb
+ create mode 100644 config/initializers/backtrace_silencers.rb
+ create mode 100644 config/initializers/cookies_serializer.rb
+ create mode 100644 config/initializers/filter_parameter_logging.rb
+ create mode 100644 config/initializers/inflections.rb
+ create mode 100644 config/initializers/mime_types.rb
+ create mode 100644 config/initializers/session_store.rb
+ create mode 100644 config/initializers/wrap_parameters.rb
+ create mode 100644 config/locales/en.yml
+ create mode 100644 config/routes.rb
+ create mode 100644 config/secrets.yml
+ create mode 100644 db/seeds.rb
+ create mode 100644 lib/assets/.keep
+ create mode 100644 lib/tasks/.keep
+ create mode 100644 log/.keep
+ create mode 100644 public/404.html
+ create mode 100644 public/422.html
+ create mode 100644 public/500.html
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/robots.txt
+ create mode 100644 vendor/assets/javascripts/.keep
+ create mode 100644 vendor/assets/stylesheets/.keep
+Franks-iMac:blog_post_message_2 Frank$ sublime .
+Franks-iMac:blog_post_message_2 Frank$ rails c
+Loading development environment (Rails 4.1.8)
+2.2.1 :001 > Hirb.enable
+ => true 
+2.2.1 :002 > User.create(first_name:"Frank", last_name:"Sun", email_address:"popsun@me.com")
+   (0.1ms)  begin transaction
+  User Exists (0.2ms)  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email_address") = LOWER('popsun@me.com') LIMIT 1
+  SQL (0.3ms)  INSERT INTO "users" ("created_at", "email_address", "first_name", "last_name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-10-15 03:02:35.639734"], ["email_address", "popsun@me.com"], ["first_name", "Frank"], ["last_name", "Sun"], ["updated_at", "2015-10-15 03:02:35.639734"]]
+   (2.0ms)  commit transaction
++----+------------+-----------+---------------+-------------------------+-------------------------+
+| id | first_name | last_name | email_address | created_at              | updated_at              |
++----+------------+-----------+---------------+-------------------------+-------------------------+
+| 1  | Frank      | Sun       | popsun@me.com | 2015-10-15 03:02:35 UTC | 2015-10-15 03:02:35 UTC |
++----+------------+-----------+---------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :003 > User.create(first_name:"Alan", last_name:"Ng", email_address:"alan@gmail.com")
+   (0.1ms)  begin transaction
+  User Exists (0.2ms)  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email_address") = LOWER('alan@gmail.com') LIMIT 1
+  SQL (0.3ms)  INSERT INTO "users" ("created_at", "email_address", "first_name", "last_name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-10-15 03:03:09.769846"], ["email_address", "alan@gmail.com"], ["first_name", "Alan"], ["last_name", "Ng"], ["updated_at", "2015-10-15 03:03:09.769846"]]
+   (2.6ms)  commit transaction
++----+------------+-----------+----------------+-------------------------+-------------------------+
+| id | first_name | last_name | email_address  | created_at              | updated_at              |
++----+------------+-----------+----------------+-------------------------+-------------------------+
+| 2  | Alan       | Ng        | alan@gmail.com | 2015-10-15 03:03:09 UTC | 2015-10-15 03:03:09 UTC |
++----+------------+-----------+----------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :004 > User.create(first_name:"Jimmy", last_name:"Jun", email_address:"jimmy@gmail.com")
+   (0.1ms)  begin transaction
+  User Exists (0.2ms)  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email_address") = LOWER('jimmy@gmail.com') LIMIT 1
+  SQL (0.3ms)  INSERT INTO "users" ("created_at", "email_address", "first_name", "last_name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-10-15 03:03:51.045238"], ["email_address", "jimmy@gmail.com"], ["first_name", "Jimmy"], ["last_name", "Jun"], ["updated_at", "2015-10-15 03:03:51.045238"]]
+   (2.6ms)  commit transaction
++----+------------+-----------+-----------------+-------------------------+-------------------------+
+| id | first_name | last_name | email_address   | created_at              | updated_at              |
++----+------------+-----------+-----------------+-------------------------+-------------------------+
+| 3  | Jimmy      | Jun       | jimmy@gmail.com | 2015-10-15 03:03:51 UTC | 2015-10-15 03:03:51 UTC |
++----+------------+-----------+-----------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :005 > User.create(first_name:"Michael", last_name:"Chio", email_address:"michael@gmail.com")
+   (0.1ms)  begin transaction
+  User Exists (0.2ms)  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email_address") = LOWER('michael@gmail.com') LIMIT 1
+  SQL (0.3ms)  INSERT INTO "users" ("created_at", "email_address", "first_name", "last_name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-10-15 03:04:42.290601"], ["email_address", "michael@gmail.com"], ["first_name", "Michael"], ["last_name", "Chio"], ["updated_at", "2015-10-15 03:04:42.290601"]]
+   (2.6ms)  commit transaction
++----+------------+-----------+-------------------+------------------------+------------------------+
+| id | first_name | last_name | email_address     | created_at             | updated_at             |
++----+------------+-----------+-------------------+------------------------+------------------------+
+| 4  | Michael    | Chio      | michael@gmail.com | 2015-10-15 03:04:42... | 2015-10-15 03:04:42... |
++----+------------+-----------+-------------------+------------------------+------------------------+
+1 row in set
+2.2.1 :006 > User.create(first_name:"Steven", last_name:"Cui", email_address:"steven@me.com")
+   (0.1ms)  begin transaction
+  User Exists (0.2ms)  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email_address") = LOWER('steven@me.com') LIMIT 1
+  SQL (0.3ms)  INSERT INTO "users" ("created_at", "email_address", "first_name", "last_name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-10-15 03:05:25.896077"], ["email_address", "steven@me.com"], ["first_name", "Steven"], ["last_name", "Cui"], ["updated_at", "2015-10-15 03:05:25.896077"]]
+   (2.6ms)  commit transaction
++----+------------+-----------+---------------+-------------------------+-------------------------+
+| id | first_name | last_name | email_address | created_at              | updated_at              |
++----+------------+-----------+---------------+-------------------------+-------------------------+
+| 5  | Steven     | Cui       | steven@me.com | 2015-10-15 03:05:25 UTC | 2015-10-15 03:05:25 UTC |
++----+------------+-----------+---------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :007 > Blog.create(name:"Sun's blog", description:"Free coupon site")
+   (0.0ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "blogs" ("created_at", "description", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-10-15 03:06:54.091501"], ["description", "Free coupon site"], ["name", "Sun's blog"], ["updated_at", "2015-10-15 03:06:54.091501"]]
+   (2.5ms)  commit transaction
++----+------------+------------------+-------------------------+-------------------------+
+| id | name       | description      | created_at              | updated_at              |
++----+------------+------------------+-------------------------+-------------------------+
+| 1  | Sun's blog | Free coupon site | 2015-10-15 03:06:54 UTC | 2015-10-15 03:06:54 UTC |
++----+------------+------------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :008 > Blog.create(name:"Flying in the sky", description:"About weather")
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "blogs" ("created_at", "description", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-10-15 03:07:35.439828"], ["description", "About weather"], ["name", "Flying in the sky"], ["updated_at", "2015-10-15 03:07:35.439828"]]
+   (2.6ms)  commit transaction
++----+-------------------+---------------+-------------------------+-------------------------+
+| id | name              | description   | created_at              | updated_at              |
++----+-------------------+---------------+-------------------------+-------------------------+
+| 2  | Flying in the sky | About weather | 2015-10-15 03:07:35 UTC | 2015-10-15 03:07:35 UTC |
++----+-------------------+---------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :009 > Blog.create(name:"Banana Boat Blog", description:"All about fruit")
+   (0.1ms)  begin transaction
+  SQL (0.4ms)  INSERT INTO "blogs" ("created_at", "description", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-10-15 03:08:43.738355"], ["description", "All about fruit"], ["name", "Banana Boat Blog"], ["updated_at", "2015-10-15 03:08:43.738355"]]
+   (0.8ms)  commit transaction
++----+------------------+-----------------+-------------------------+-------------------------+
+| id | name             | description     | created_at              | updated_at              |
++----+------------------+-----------------+-------------------------+-------------------------+
+| 3  | Banana Boat Blog | All about fruit | 2015-10-15 03:08:43 UTC | 2015-10-15 03:08:43 UTC |
++----+------------------+-----------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :010 > Blog.create(name:"Iphone's fan", description:"News of iphone")
+   (0.1ms)  begin transaction
+  SQL (0.4ms)  INSERT INTO "blogs" ("created_at", "description", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-10-15 03:09:16.610860"], ["description", "News of iphone"], ["name", "Iphone's fan"], ["updated_at", "2015-10-15 03:09:16.610860"]]
+   (2.0ms)  commit transaction
++----+--------------+----------------+-------------------------+-------------------------+
+| id | name         | description    | created_at              | updated_at              |
++----+--------------+----------------+-------------------------+-------------------------+
+| 4  | Iphone's fan | News of iphone | 2015-10-15 03:09:16 UTC | 2015-10-15 03:09:16 UTC |
++----+--------------+----------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :011 > Blog.create(name:"Mac world", description:"Computer Science stuff")
+   (0.1ms)  begin transaction
+  SQL (0.4ms)  INSERT INTO "blogs" ("created_at", "description", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-10-15 03:10:23.470114"], ["description", "Computer Science stuff"], ["name", "Mac world"], ["updated_at", "2015-10-15 03:10:23.470114"]]
+   (2.5ms)  commit transaction
++----+-----------+------------------------+-------------------------+-------------------------+
+| id | name      | description            | created_at              | updated_at              |
++----+-----------+------------------------+-------------------------+-------------------------+
+| 5  | Mac world | Computer Science stuff | 2015-10-15 03:10:23 UTC | 2015-10-15 03:10:23 UTC |
++----+-----------+------------------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :012 > Blog.first
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1
++----+------------+------------------+-------------------------+-------------------------+
+| id | name       | description      | created_at              | updated_at              |
++----+------------+------------------+-------------------------+-------------------------+
+| 1  | Sun's blog | Free coupon site | 2015-10-15 03:06:54 UTC | 2015-10-15 03:06:54 UTC |
++----+------------+------------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :013 > Owner.create(user:User.first, blog: Blog.first)
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  Blog Load (0.1ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1
+   (0.1ms)  begin transaction
+  SQL (0.4ms)  INSERT INTO "owners" ("blog_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["blog_id", 1], ["created_at", "2015-10-15 03:13:15.944000"], ["updated_at", "2015-10-15 03:13:15.944000"], ["user_id", 1]]
+   (2.5ms)  commit transaction
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 1  | 1       | 1       | 2015-10-15 03:13:15 UTC | 2015-10-15 03:13:15 UTC |
++----+---------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :014 > Owner.create(user:User.first, blog:Blog.second)
+  User Load (1.4ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "owners" ("blog_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["blog_id", 2], ["created_at", "2015-10-15 03:13:43.286585"], ["updated_at", "2015-10-15 03:13:43.286585"], ["user_id", 1]]
+   (2.5ms)  commit transaction
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 2  | 1       | 2       | 2015-10-15 03:13:43 UTC | 2015-10-15 03:13:43 UTC |
++----+---------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :015 > Owner.create(user:User.first, blog:Blog.third)
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  Blog Load (0.1ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 2
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "owners" ("blog_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["blog_id", 3], ["created_at", "2015-10-15 03:14:06.686212"], ["updated_at", "2015-10-15 03:14:06.686212"], ["user_id", 1]]
+   (2.1ms)  commit transaction
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 3  | 1       | 3       | 2015-10-15 03:14:06 UTC | 2015-10-15 03:14:06 UTC |
++----+---------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :016 > Owner.create(user:User.second, blog:Blog.fourth)
+  User Load (1.4ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 3
+   (0.0ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "owners" ("blog_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["blog_id", 4], ["created_at", "2015-10-15 03:14:46.354098"], ["updated_at", "2015-10-15 03:14:46.354098"], ["user_id", 2]]
+   (2.1ms)  commit transaction
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 4  | 2       | 4       | 2015-10-15 03:14:46 UTC | 2015-10-15 03:14:46 UTC |
++----+---------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :017 > Owner.create(user:User.last, blog:Blog.fifth)
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 4
+   (0.0ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "owners" ("blog_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["blog_id", 5], ["created_at", "2015-10-15 03:15:26.820449"], ["updated_at", "2015-10-15 03:15:26.820449"], ["user_id", 5]]
+   (2.7ms)  commit transaction
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 5  | 5       | 5       | 2015-10-15 03:15:26 UTC | 2015-10-15 03:15:26 UTC |
++----+---------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :018 > Owner.create(user:User.third, blog:Blog.first)
+  User Load (0.3ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Blog Load (0.1ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "owners" ("blog_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["blog_id", 1], ["created_at", "2015-10-15 03:21:07.305662"], ["updated_at", "2015-10-15 03:21:07.305662"], ["user_id", 3]]
+   (2.1ms)  commit transaction
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 6  | 3       | 1       | 2015-10-15 03:21:07 UTC | 2015-10-15 03:21:07 UTC |
++----+---------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :019 > Owner.create(user:User.third, blog:Blog.second)
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "owners" ("blog_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["blog_id", 2], ["created_at", "2015-10-15 03:21:19.162082"], ["updated_at", "2015-10-15 03:21:19.162082"], ["user_id", 3]]
+   (2.1ms)  commit transaction
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 7  | 3       | 2       | 2015-10-15 03:21:19 UTC | 2015-10-15 03:21:19 UTC |
++----+---------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :020 > Owner.create(user:User.third, blog:Blog.third)
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 2
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "owners" ("blog_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["blog_id", 3], ["created_at", "2015-10-15 03:21:24.731292"], ["updated_at", "2015-10-15 03:21:24.731292"], ["user_id", 3]]
+   (2.1ms)  commit transaction
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 8  | 3       | 3       | 2015-10-15 03:21:24 UTC | 2015-10-15 03:21:24 UTC |
++----+---------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :021 > Owner.create(user:User.third, blog:Blog.fourth)
+  User Load (0.7ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 3
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "owners" ("blog_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["blog_id", 4], ["created_at", "2015-10-15 03:21:29.951288"], ["updated_at", "2015-10-15 03:21:29.951288"], ["user_id", 3]]
+   (2.6ms)  commit transaction
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 9  | 3       | 4       | 2015-10-15 03:21:29 UTC | 2015-10-15 03:21:29 UTC |
++----+---------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :022 > Owner.create(user:User.third, blog:Blog.fifth)
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 4
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "owners" ("blog_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["blog_id", 5], ["created_at", "2015-10-15 03:21:34.170085"], ["updated_at", "2015-10-15 03:21:34.170085"], ["user_id", 3]]
+   (2.6ms)  commit transaction
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 10 | 3       | 5       | 2015-10-15 03:21:34 UTC | 2015-10-15 03:21:34 UTC |
++----+---------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :023 > Post.create(user:User.first, blog:Blog.find(2), title:"Why I am doing this", content:"I don't know")
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  Blog Load (0.1ms)  SELECT  "blogs".* FROM "blogs"  WHERE "blogs"."id" = ? LIMIT 1  [["id", 2]]
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "posts" ("blog_id", "content", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["blog_id", 2], ["content", "I don't know"], ["created_at", "2015-10-15 03:24:29.893444"], ["title", "Why I am doing this"], ["updated_at", "2015-10-15 03:24:29.893444"], ["user_id", 1]]
+   (2.1ms)  commit transaction
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+| id | user_id | blog_id | title             | content      | created_at        | updated_at        |
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+| 1  | 1       | 2       | Why I am doing... | I don't know | 2015-10-15 03:... | 2015-10-15 03:... |
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+1 row in set
+2.2.1 :024 > Post.create(user:User.first, blog:Blog.find(2), title:"What's the weather today", content:"I don't know")
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  Blog Load (0.1ms)  SELECT  "blogs".* FROM "blogs"  WHERE "blogs"."id" = ? LIMIT 1  [["id", 2]]
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "posts" ("blog_id", "content", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["blog_id", 2], ["content", "I don't know"], ["created_at", "2015-10-15 03:25:04.198320"], ["title", "What's the weather today"], ["updated_at", "2015-10-15 03:25:04.198320"], ["user_id", 1]]
+   (2.6ms)  commit transaction
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+| id | user_id | blog_id | title             | content      | created_at        | updated_at        |
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+| 2  | 1       | 2       | What's the wea... | I don't know | 2015-10-15 03:... | 2015-10-15 03:... |
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+1 row in set
+2.2.1 :025 > Post.create(user:User.first, blog:Blog.find(2), title:"Tomorrow will be a sunny day", content:"I don't know")
+  User Load (0.3ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  Blog Load (0.1ms)  SELECT  "blogs".* FROM "blogs"  WHERE "blogs"."id" = ? LIMIT 1  [["id", 2]]
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "posts" ("blog_id", "content", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["blog_id", 2], ["content", "I don't know"], ["created_at", "2015-10-15 03:25:34.585433"], ["title", "Tomorrow will be a sunny day"], ["updated_at", "2015-10-15 03:25:34.585433"], ["user_id", 1]]
+   (2.1ms)  commit transaction
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+| id | user_id | blog_id | title             | content      | created_at        | updated_at        |
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+| 3  | 1       | 2       | Tomorrow will ... | I don't know | 2015-10-15 03:... | 2015-10-15 03:... |
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+1 row in set
+2.2.1 :026 > Post.create(user:User.second, blog:Blog.last, title:"Ah?Ha?", content:"That's the name of a wedding")
+  User Load (0.4ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" DESC LIMIT 1
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "posts" ("blog_id", "content", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["blog_id", 5], ["content", "That's the name of a wedding"], ["created_at", "2015-10-15 03:26:53.729261"], ["title", "Ah?Ha?"], ["updated_at", "2015-10-15 03:26:53.729261"], ["user_id", 2]]
+   (2.1ms)  commit transaction
++----+---------+---------+--------+---------------------+---------------------+---------------------+
+| id | user_id | blog_id | title  | content             | created_at          | updated_at          |
++----+---------+---------+--------+---------------------+---------------------+---------------------+
+| 4  | 2       | 5       | Ah?Ha? | That's the name ... | 2015-10-15 03:26... | 2015-10-15 03:26... |
++----+---------+---------+--------+---------------------+---------------------+---------------------+
+1 row in set
+2.2.1 :027 > Post.create(user:User.second, blog:Blog.last, title:"Frank is a nice person", content:"I know!")
+  User Load (0.3ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  Blog Load (0.1ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" DESC LIMIT 1
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "posts" ("blog_id", "content", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["blog_id", 5], ["content", "I know!"], ["created_at", "2015-10-15 03:27:34.353888"], ["title", "Frank is a nice person"], ["updated_at", "2015-10-15 03:27:34.353888"], ["user_id", 2]]
+   (2.2ms)  commit transaction
++----+---------+---------+---------------------+---------+--------------------+---------------------+
+| id | user_id | blog_id | title               | content | created_at         | updated_at          |
++----+---------+---------+---------------------+---------+--------------------+---------------------+
+| 5  | 2       | 5       | Frank is a nice ... | I know! | 2015-10-15 03:2... | 2015-10-15 03:27... |
++----+---------+---------+---------------------+---------+--------------------+---------------------+
+1 row in set
+2.2.1 :028 > Post.create(user:User.second, blog:Blog.last, title:"Reno is Dark city", content:"I believe it")
+  User Load (0.3ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  Blog Load (0.1ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" DESC LIMIT 1
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "posts" ("blog_id", "content", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["blog_id", 5], ["content", "I believe it"], ["created_at", "2015-10-15 03:28:21.559070"], ["title", "Reno is Dark city"], ["updated_at", "2015-10-15 03:28:21.559070"], ["user_id", 2]]
+   (1.1ms)  commit transaction
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+| id | user_id | blog_id | title             | content      | created_at        | updated_at        |
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+| 6  | 2       | 5       | Reno is Dark city | I believe it | 2015-10-15 03:... | 2015-10-15 03:... |
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+1 row in set
+2.2.1 :029 > Post.create(user:User.second, blog:Blog.last, title:"Maybe this is the best", content:"Maybe not")
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" DESC LIMIT 1
+   (0.0ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "posts" ("blog_id", "content", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["blog_id", 5], ["content", "Maybe not"], ["created_at", "2015-10-15 03:29:13.444069"], ["title", "Maybe this is the best"], ["updated_at", "2015-10-15 03:29:13.444069"], ["user_id", 2]]
+   (2.6ms)  commit transaction
++----+---------+---------+--------------------+-----------+--------------------+--------------------+
+| id | user_id | blog_id | title              | content   | created_at         | updated_at         |
++----+---------+---------+--------------------+-----------+--------------------+--------------------+
+| 7  | 2       | 5       | Maybe this is t... | Maybe not | 2015-10-15 03:2... | 2015-10-15 03:2... |
++----+---------+---------+--------------------+-----------+--------------------+--------------------+
+1 row in set
+2.2.1 :030 > Post.create(user:User.third, blog:Blog.last, title:"This is No.3 user's post", content:"Awesome!")
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Blog Load (0.1ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" DESC LIMIT 1
+   (0.0ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "posts" ("blog_id", "content", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["blog_id", 5], ["content", "Awesome!"], ["created_at", "2015-10-15 03:30:38.554979"], ["title", "This is No.3 user's post"], ["updated_at", "2015-10-15 03:30:38.554979"], ["user_id", 3]]
+   (2.0ms)  commit transaction
++----+---------+---------+--------------------+----------+--------------------+---------------------+
+| id | user_id | blog_id | title              | content  | created_at         | updated_at          |
++----+---------+---------+--------------------+----------+--------------------+---------------------+
+| 8  | 3       | 5       | This is No.3 us... | Awesome! | 2015-10-15 03:3... | 2015-10-15 03:30... |
++----+---------+---------+--------------------+----------+--------------------+---------------------+
+1 row in set
+2.2.1 :031 > Post.create(user:User.third, blog:Blog.third, title:"I run out of title", content:"So as content")
+  User Load (0.3ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 2
+   (0.0ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "posts" ("blog_id", "content", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["blog_id", 3], ["content", "So as content"], ["created_at", "2015-10-15 03:31:22.527591"], ["title", "I run out of title"], ["updated_at", "2015-10-15 03:31:22.527591"], ["user_id", 3]]
+   (2.6ms)  commit transaction
++----+---------+---------+-------------------+---------------+------------------+-------------------+
+| id | user_id | blog_id | title             | content       | created_at       | updated_at        |
++----+---------+---------+-------------------+---------------+------------------+-------------------+
+| 9  | 3       | 3       | I run out of t... | So as content | 2015-10-15 03... | 2015-10-15 03:... |
++----+---------+---------+-------------------+---------------+------------------+-------------------+
+1 row in set
+2.2.1 :032 > Message.create(user:third, post:Post.first, message:"This message is from User No.3")
+NameError: undefined local variable or method `third' for main:Object
+	from (irb):32
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from 
+2.2.1 :034 >   Message.create(user:User.third, post:Post.first, message:"This message is from User No.3")
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1
+   (0.0ms)  begin transaction
+   (0.1ms)  rollback transaction
++----+---------+---------+--------+--------------------------------+------------+------------+
+| id | user_id | post_id | author | message                        | created_at | updated_at |
++----+---------+---------+--------+--------------------------------+------------+------------+
+|    | 3       | 1       |        | This message is from User No.3 |            |            |
++----+---------+---------+--------+--------------------------------+------------+------------+
+1 row in set
+2.2.1 :035 > Message.create(user:User.fourth, post:Post.last, message:"I am User No.4")
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 3
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" DESC LIMIT 1
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
++----+---------+---------+--------+----------------+------------+------------+
+| id | user_id | post_id | author | message        | created_at | updated_at |
++----+---------+---------+--------+----------------+------------+------------+
+|    | 4       | 9       |        | I am User No.4 |            |            |
++----+---------+---------+--------+----------------+------------+------------+
+1 row in set
+2.2.1 :036 > Message.create(user:User.fourth, post:Post.last, message:"hahd am User No.4")
+  User Load (0.4ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 3
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" DESC LIMIT 1
+   (0.0ms)  begin transaction
+   (0.1ms)  rollback transaction
++----+---------+---------+--------+-------------------+------------+------------+
+| id | user_id | post_id | author | message           | created_at | updated_at |
++----+---------+---------+--------+-------------------+------------+------------+
+|    | 4       | 9       |        | hahd am User No.4 |            |            |
++----+---------+---------+--------+-------------------+------------+------------+
+1 row in set
+2.2.1 :037 > Message.create(user:User.fourth, post:Post.last, message:"Again")
+  User Load (0.6ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 3
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" DESC LIMIT 1
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
++----+---------+---------+--------+---------+------------+------------+
+| id | user_id | post_id | author | message | created_at | updated_at |
++----+---------+---------+--------+---------+------------+------------+
+|    | 4       | 9       |        | Again   |            |            |
++----+---------+---------+--------+---------+------------+------------+
+1 row in set
+2.2.1 :038 > Post.second.owner
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1 OFFSET 1
+NoMethodError: undefined method `owner' for #<Post:0x007f9593ba60c8>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activemodel-4.1.8/lib/active_model/attribute_methods.rb:435:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/attribute_methods.rb:213:in `method_missing'
+	from (irb):38
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'2.2.1 :039 > 
+2.2.1 :040 >   Post.second.owners
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1 OFFSET 1
+NoMethodError: undefined method `owners' for #<Post:0x007f9593b865c0>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activemodel-4.1.8/lib/active_model/attribute_methods.rb:435:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/attribute_methods.rb:213:in `method_missing'
+	from (irb):40
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from 
+2.2.1 :042 >   Owner.where(post:Post.second)
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1 OFFSET 1
+  Owner Load (0.2ms)  SELECT "owners".* FROM "owners"  WHERE "owners"."post" = 2
+SQLite3::SQLException: no such column: owners.post: SELECT "owners".* FROM "owners"  WHERE "owners"."post" = 2
+Hirb Error: SQLite3::SQLException: no such column: owners.post: SELECT "owners".* FROM "owners"  WHERE "owners"."post" = 2
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/sqlite3-1.3.11/lib/sqlite3/database.rb:91:in `initialize'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/sqlite3-1.3.11/lib/sqlite3/database.rb:91:in `new'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/sqlite3-1.3.11/lib/sqlite3/database.rb:91:in `prepare'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/connection_adapters/sqlite3_adapter.rb:301:in `block in exec_query'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/connection_adapters/abstract_adapter.rb:373:in `block in log'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/connection_adapters/abstract_adapter.rb:367:in `log'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/connection_adapters/sqlite3_adapter.rb:298:in `exec_query'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/connection_adapters/sqlite3_adapter.rb:510:in `select'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/connection_adapters/abstract/database_statements.rb:24:in `select_all'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/connection_adapters/abstract/query_cache.rb:70:in `select_all'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/querying.rb:39:in `find_by_sql'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation.rb:611:in `exec_queries'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation.rb:493:in `load'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation.rb:238:in `to_a'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:46:in `to_ary'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/hirb-0.7.3/lib/hirb/formatter.rb:88:in `Array'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/hirb-0.7.3/lib/hirb/formatter.rb:88:in `determine_output_class'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/hirb-0.7.3/lib/hirb/formatter.rb:53:in `format_output'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/hirb-0.7.3/lib/hirb/view.rb:205:in `render_output'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/hirb-0.7.3/lib/hirb/view.rb:123:in `view_output'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/hirb-0.7.3/lib/hirb/view.rb:201:in `view_or_page_output'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/hirb-0.7.3/lib/hirb/view.rb:187:in `output_value'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb.rb:490:in `block (2 levels) in eval_input'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb.rb:623:in `signal_status'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb.rb:486:in `block in eval_input'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb/ruby-lex.rb:245:in `block (2 levels) in each_top_level_statement'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb/ruby-lex.rb:231:in `loop'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb/ruby-lex.rb:231:in `block in each_top_level_statement'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb/ruby-lex.rb:230:in `catch'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb/ruby-lex.rb:230:in `each_top_level_statement'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb.rb:485:in `eval_input'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb.rb:395:in `block in start'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb.rb:394:in `catch'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/irb.rb:394:in `start'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+    /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+    /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+    /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+    -e:1:in `<main>'
+2.2.1 :043 > Owner.all
+  Owner Load (0.2ms)  SELECT "owners".* FROM "owners"
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 1  | 1       | 1       | 2015-10-15 03:13:15 UTC | 2015-10-15 03:13:15 UTC |
+| 2  | 1       | 2       | 2015-10-15 03:13:43 UTC | 2015-10-15 03:13:43 UTC |
+| 3  | 1       | 3       | 2015-10-15 03:14:06 UTC | 2015-10-15 03:14:06 UTC |
+| 4  | 2       | 4       | 2015-10-15 03:14:46 UTC | 2015-10-15 03:14:46 UTC |
+| 5  | 5       | 5       | 2015-10-15 03:15:26 UTC | 2015-10-15 03:15:26 UTC |
+| 6  | 3       | 1       | 2015-10-15 03:21:07 UTC | 2015-10-15 03:21:07 UTC |
+| 7  | 3       | 2       | 2015-10-15 03:21:19 UTC | 2015-10-15 03:21:19 UTC |
+| 8  | 3       | 3       | 2015-10-15 03:21:24 UTC | 2015-10-15 03:21:24 UTC |
+| 9  | 3       | 4       | 2015-10-15 03:21:29 UTC | 2015-10-15 03:21:29 UTC |
+| 10 | 3       | 5       | 2015-10-15 03:21:34 UTC | 2015-10-15 03:21:34 UTC |
++----+---------+---------+-------------------------+-------------------------+
+10 rows in set
+2.2.1 :044 > Post.second.blogs
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1 OFFSET 1
+NoMethodError: undefined method `blogs' for #<Post:0x007f9592fd26e8>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activemodel-4.1.8/lib/active_model/attribute_methods.rb:435:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/attribute_methods.rb:213:in `method_missing'
+	from (irb):44
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'2.2.1 :045 > 
+2.2.1 :046 >   Post.second.blog
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1 OFFSET 1
+  Blog Load (0.1ms)  SELECT  "blogs".* FROM "blogs"  WHERE "blogs"."id" = ? LIMIT 1  [["id", 2]]
++----+-------------------+---------------+-------------------------+-------------------------+
+| id | name              | description   | created_at              | updated_at              |
++----+-------------------+---------------+-------------------------+-------------------------+
+| 2  | Flying in the sky | About weather | 2015-10-15 03:07:35 UTC | 2015-10-15 03:07:35 UTC |
++----+-------------------+---------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :047 > Post.all
+  Post Load (0.2ms)  SELECT "posts".* FROM "posts"
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| id | user_id | blog_id | title            | content         | created_at       | updated_at       |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| 1  | 1       | 2       | Why I am doin... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
+| 2  | 1       | 2       | What's the we... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
+| 3  | 1       | 2       | Tomorrow will... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
+| 4  | 2       | 5       | Ah?Ha?           | That's the n... | 2015-10-15 03... | 2015-10-15 03... |
+| 5  | 2       | 5       | Frank is a ni... | I know!         | 2015-10-15 03... | 2015-10-15 03... |
+| 6  | 2       | 5       | Reno is Dark ... | I believe it    | 2015-10-15 03... | 2015-10-15 03... |
+| 7  | 2       | 5       | Maybe this is... | Maybe not       | 2015-10-15 03... | 2015-10-15 03... |
+| 8  | 3       | 5       | This is No.3 ... | Awesome!        | 2015-10-15 03... | 2015-10-15 03... |
+| 9  | 3       | 3       | I run out of ... | So as content   | 2015-10-15 03... | 2015-10-15 03... |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+9 rows in set
+2.2.1 :048 > Blog.all
+  Blog Load (0.2ms)  SELECT "blogs".* FROM "blogs"
++----+-------------------+------------------------+------------------------+------------------------+
+| id | name              | description            | created_at             | updated_at             |
++----+-------------------+------------------------+------------------------+------------------------+
+| 1  | Sun's blog        | Free coupon site       | 2015-10-15 03:06:54... | 2015-10-15 03:06:54... |
+| 2  | Flying in the sky | About weather          | 2015-10-15 03:07:35... | 2015-10-15 03:07:35... |
+| 3  | Banana Boat Blog  | All about fruit        | 2015-10-15 03:08:43... | 2015-10-15 03:08:43... |
+| 4  | Iphone's fan      | News of iphone         | 2015-10-15 03:09:16... | 2015-10-15 03:09:16... |
+| 5  | Mac world         | Computer Science stuff | 2015-10-15 03:10:23... | 2015-10-15 03:10:23... |
++----+-------------------+------------------------+------------------------+------------------------+
+5 rows in set
+2.2.1 :049 > Post.second.user
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1 OFFSET 1
+  User Load (0.8ms)  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
++----+------------+-----------+---------------+-------------------------+-------------------------+
+| id | first_name | last_name | email_address | created_at              | updated_at              |
++----+------------+-----------+---------------+-------------------------+-------------------------+
+| 1  | Frank      | Sun       | popsun@me.com | 2015-10-15 03:02:35 UTC | 2015-10-15 03:02:35 UTC |
++----+------------+-----------+---------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :050 > Post.second.update(user:User.last)
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1 OFFSET 1
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  UPDATE "posts" SET "updated_at" = ?, "user_id" = ? WHERE "posts"."id" = 2  [["updated_at", "2015-10-15 03:43:00.753183"], ["user_id", 5]]
+   (2.1ms)  commit transaction
+ => true 
+2.2.1 :051 > Post.second
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1 OFFSET 1
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+| id | user_id | blog_id | title             | content      | created_at        | updated_at        |
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+| 2  | 5       | 2       | What's the wea... | I don't know | 2015-10-15 03:... | 2015-10-15 03:... |
++----+---------+---------+-------------------+--------------+-------------------+-------------------+
+1 row in set
+2.2.1 :052 > Post.second.update(content:"Change to something else")
+  Post Load (0.2ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1 OFFSET 1
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  UPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = 2  [["content", "Change to something else"], ["updated_at", "2015-10-15 03:52:52.382631"]]
+   (2.6ms)  commit transaction
+ => true 
+2.2.1 :053 > User.third.blog
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+NoMethodError: undefined method `blog' for #<User:0x007f9594cbf328>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activemodel-4.1.8/lib/active_model/attribute_methods.rb:435:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/attribute_methods.rb:213:in `method_missing'
+	from (irb):53
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'2.2.1 :054 > 
+2.2.1 :055 >   User.third.blogs
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Blog Load (0.2ms)  SELECT "blogs".* FROM "blogs" INNER JOIN "owners" ON "blogs"."id" = "owners"."blog_id" WHERE "owners"."user_id" = ?  [["user_id", 3]]
++----+-------------------+------------------------+------------------------+------------------------+
+| id | name              | description            | created_at             | updated_at             |
++----+-------------------+------------------------+------------------------+------------------------+
+| 1  | Sun's blog        | Free coupon site       | 2015-10-15 03:06:54... | 2015-10-15 03:06:54... |
+| 2  | Flying in the sky | About weather          | 2015-10-15 03:07:35... | 2015-10-15 03:07:35... |
+| 3  | Banana Boat Blog  | All about fruit        | 2015-10-15 03:08:43... | 2015-10-15 03:08:43... |
+| 4  | Iphone's fan      | News of iphone         | 2015-10-15 03:09:16... | 2015-10-15 03:09:16... |
+| 5  | Mac world         | Computer Science stuff | 2015-10-15 03:10:23... | 2015-10-15 03:10:23... |
++----+-------------------+------------------------+------------------------+------------------------+
+5 rows in set
+2.2.1 :056 > User.third.posts
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."user_id" = ?  [["user_id", 3]]
++----+---------+---------+-------------------+---------------+------------------+-------------------+
+| id | user_id | blog_id | title             | content       | created_at       | updated_at        |
++----+---------+---------+-------------------+---------------+------------------+-------------------+
+| 8  | 3       | 5       | This is No.3 u... | Awesome!      | 2015-10-15 03... | 2015-10-15 03:... |
+| 9  | 3       | 3       | I run out of t... | So as content | 2015-10-15 03... | 2015-10-15 03:... |
++----+---------+---------+-------------------+---------------+------------------+-------------------+
+2 rows in set
+2.2.1 :057 > User.third.posts
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Post Load (0.1ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."user_id" = ?  [["user_id", 3]]
++----+---------+---------+-------------------+---------------+------------------+-------------------+
+| id | user_id | blog_id | title             | content       | created_at       | updated_at        |
++----+---------+---------+-------------------+---------------+------------------+-------------------+
+| 8  | 3       | 5       | This is No.3 u... | Awesome!      | 2015-10-15 03... | 2015-10-15 03:... |
+| 9  | 3       | 3       | I run out of t... | So as content | 2015-10-15 03... | 2015-10-15 03:... |
++----+---------+---------+-------------------+---------------+------------------+-------------------+
+2 rows in set
+2.2.1 :058 > User.third.messages
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Message Load (1.8ms)  SELECT "messages".* FROM "messages"  WHERE "messages"."user_id" = ?  [["user_id", 3]]
+ => #<ActiveRecord::Associations::CollectionProxy []> 
+2.2.1 :059 > User.first.messages
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  Message Load (0.3ms)  SELECT "messages".* FROM "messages"  WHERE "messages"."user_id" = ?  [["user_id", 1]]
+ => #<ActiveRecord::Associations::CollectionProxy []> 
+2.2.1 :060 > User.second.messages
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  Message Load (0.2ms)  SELECT "messages".* FROM "messages"  WHERE "messages"."user_id" = ?  [["user_id", 2]]
+ => #<ActiveRecord::Associations::CollectionProxy []> 
+2.2.1 :061 > Message.all
+  Message Load (1.9ms)  SELECT "messages".* FROM "messages"
+ => #<ActiveRecord::Relation []> 
+2.2.1 :062 > Message.create(user:User.third, post:Post.first, author: User.third, message:"Test")
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Post Load (0.1ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1
+  User Load (0.1ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+   (0.0ms)  begin transaction
+  SQL (2.4ms)  INSERT INTO "messages" ("author", "created_at", "message", "post_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["author", 3], ["created_at", "2015-10-15 03:58:33.319667"], ["message", "Test"], ["post_id", 1], ["updated_at", "2015-10-15 03:58:33.319667"], ["user_id", 3]]
+   (0.7ms)  commit transaction
++----+---------+---------+--------------------+---------+---------------------+---------------------+
+| id | user_id | post_id | author             | message | created_at          | updated_at          |
++----+---------+---------+--------------------+---------+---------------------+---------------------+
+| 1  | 3       | 1       | #<User:0x007f95... | Test    | 2015-10-15 03:58... | 2015-10-15 03:58... |
++----+---------+---------+--------------------+---------+---------------------+---------------------+
+1 row in set
+2.2.1 :063 > Message.create(user:User.third, post:Post.first, author: User.third.select("first_name"), message:"Test")
+  User Load (0.3ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Post Load (0.1ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1
+  User Load (0.1ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+NoMethodError: private method `select' called for #<User:0x007f9592ea2a98>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activemodel-4.1.8/lib/active_model/attribute_methods.rb:432:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/attribute_methods.rb:213:in `method_missing'
+	from (irb):63
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from 
+2.2.1 :065 >   Message.create(user:User.third, post:Post.first, author: User.third.first_name, message:"Test")
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Post Load (0.1ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1
+  User Load (0.1ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+   (0.0ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "messages" ("author", "created_at", "message", "post_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Jimmy"], ["created_at", "2015-10-15 04:00:00.260027"], ["message", "Test"], ["post_id", 1], ["updated_at", "2015-10-15 04:00:00.260027"], ["user_id", 3]]
+   (2.1ms)  commit transaction
++----+---------+---------+--------+---------+-------------------------+-------------------------+
+| id | user_id | post_id | author | message | created_at              | updated_at              |
++----+---------+---------+--------+---------+-------------------------+-------------------------+
+| 2  | 3       | 1       | Jimmy  | Test    | 2015-10-15 04:00:00 UTC | 2015-10-15 04:00:00 UTC |
++----+---------+---------+--------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :066 > Message.create(user:User.third, post:Post.first, author: User.third.first_name + " " + User.third.last_name , message:"Test")
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Post Load (0.1ms)  SELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1
+  User Load (0.1ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  User Load (0.1ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "messages" ("author", "created_at", "message", "post_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Jimmy Jun"], ["created_at", "2015-10-15 04:00:38.792360"], ["message", "Test"], ["post_id", 1], ["updated_at", "2015-10-15 04:00:38.792360"], ["user_id", 3]]
+   (0.8ms)  commit transaction
++----+---------+---------+-----------+---------+-------------------------+-------------------------+
+| id | user_id | post_id | author    | message | created_at              | updated_at              |
++----+---------+---------+-----------+---------+-------------------------+-------------------------+
+| 3  | 3       | 1       | Jimmy Jun | Test    | 2015-10-15 04:00:38 UTC | 2015-10-15 04:00:38 UTC |
++----+---------+---------+-----------+---------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :067 > User.third.messages
+  User Load (0.2ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  Message Load (0.2ms)  SELECT "messages".* FROM "messages"  WHERE "messages"."user_id" = ?  [["user_id", 3]]
++----+---------+---------+-----------+---------+-------------------------+-------------------------+
+| id | user_id | post_id | author    | message | created_at              | updated_at              |
++----+---------+---------+-----------+---------+-------------------------+-------------------------+
+| 1  | 3       | 1       | 3         | Test    | 2015-10-15 03:58:33 UTC | 2015-10-15 03:58:33 UTC |
+| 2  | 3       | 1       | Jimmy     | Test    | 2015-10-15 04:00:00 UTC | 2015-10-15 04:00:00 UTC |
+| 3  | 3       | 1       | Jimmy Jun | Test    | 2015-10-15 04:00:38 UTC | 2015-10-15 04:00:38 UTC |
++----+---------+---------+-----------+---------+-------------------------+-------------------------+
+3 rows in set
+2.2.1 :068 > Blog.first.posts
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1
+  Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 1]]
+ => #<ActiveRecord::Associations::CollectionProxy []> 
+2.2.1 :069 > Blog.all
+  Blog Load (0.2ms)  SELECT "blogs".* FROM "blogs"
++----+-------------------+------------------------+------------------------+------------------------+
+| id | name              | description            | created_at             | updated_at             |
++----+-------------------+------------------------+------------------------+------------------------+
+| 1  | Sun's blog        | Free coupon site       | 2015-10-15 03:06:54... | 2015-10-15 03:06:54... |
+| 2  | Flying in the sky | About weather          | 2015-10-15 03:07:35... | 2015-10-15 03:07:35... |
+| 3  | Banana Boat Blog  | All about fruit        | 2015-10-15 03:08:43... | 2015-10-15 03:08:43... |
+| 4  | Iphone's fan      | News of iphone         | 2015-10-15 03:09:16... | 2015-10-15 03:09:16... |
+| 5  | Mac world         | Computer Science stuff | 2015-10-15 03:10:23... | 2015-10-15 03:10:23... |
++----+-------------------+------------------------+------------------------+------------------------+
+5 rows in set
+2.2.1 :070 > Blog.second.posts
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+  Post Load (0.1ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| id | user_id | blog_id | title            | content         | created_at       | updated_at       |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| 1  | 1       | 2       | Why I am doin... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
+| 2  | 5       | 2       | What's the we... | Change to so... | 2015-10-15 03... | 2015-10-15 03... |
+| 3  | 1       | 2       | Tomorrow will... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+3 rows in set
+2.2.1 :071 > Blog.second.posts + Blog.second.users.first_name
+  Blog Load (0.7ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+NoMethodError:   User Load (0.2ms)  SELECT "users".* FROM "users" INNER JOIN "owners" ON "users"."id" = "owners"."user_id" WHERE "owners"."blog_id" = ?  [["blog_id", 2]]
+undefined method `first_name' for #<User::ActiveRecord_Associations_CollectionProxy:0x007f9593b064d8>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:136:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:99:in `method_missing'
+	from (irb):71
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'2.2.1 :072 > 
+2.2.1 :073 >   Blog.second.posts join  Blog.second.users.first_name
+  Blog Load (1.1ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+NoMethodError:   User Load (0.1ms)  SELECT "users".* FROM "users" INNER JOIN "owners" ON "users"."id" = "owners"."user_id" WHERE "owners"."blog_id" = ?  [["blog_id", 2]]
+undefined method `first_name' for #<User::ActiveRecord_Associations_CollectionProxy:0x007f9594be2220>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:136:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:99:in `method_missing'
+	from (irb):73
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'2.2.1 :074 > 
+2.2.1 :075 >   Blog.second.users
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+  User Load (0.2ms)  SELECT "users".* FROM "users" INNER JOIN "owners" ON "users"."id" = "owners"."user_id" WHERE "owners"."blog_id" = ?  [["blog_id", 2]]
++----+------------+-----------+-----------------+-------------------------+-------------------------+
+| id | first_name | last_name | email_address   | created_at              | updated_at              |
++----+------------+-----------+-----------------+-------------------------+-------------------------+
+| 1  | Frank      | Sun       | popsun@me.com   | 2015-10-15 03:02:35 UTC | 2015-10-15 03:02:35 UTC |
+| 3  | Jimmy      | Jun       | jimmy@gmail.com | 2015-10-15 03:03:51 UTC | 2015-10-15 03:03:51 UTC |
++----+------------+-----------+-----------------+-------------------------+-------------------------+
+2 rows in set
+2.2.1 :076 > Blog.all
+  Blog Load (0.2ms)  SELECT "blogs".* FROM "blogs"
++----+-------------------+------------------------+------------------------+------------------------+
+| id | name              | description            | created_at             | updated_at             |
++----+-------------------+------------------------+------------------------+------------------------+
+| 1  | Sun's blog        | Free coupon site       | 2015-10-15 03:06:54... | 2015-10-15 03:06:54... |
+| 2  | Flying in the sky | About weather          | 2015-10-15 03:07:35... | 2015-10-15 03:07:35... |
+| 3  | Banana Boat Blog  | All about fruit        | 2015-10-15 03:08:43... | 2015-10-15 03:08:43... |
+| 4  | Iphone's fan      | News of iphone         | 2015-10-15 03:09:16... | 2015-10-15 03:09:16... |
+| 5  | Mac world         | Computer Science stuff | 2015-10-15 03:10:23... | 2015-10-15 03:10:23... |
++----+-------------------+------------------------+------------------------+------------------------+
+5 rows in set
+2.2.1 :077 > Blog.second
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
++----+-------------------+---------------+-------------------------+-------------------------+
+| id | name              | description   | created_at              | updated_at              |
++----+-------------------+---------------+-------------------------+-------------------------+
+| 2  | Flying in the sky | About weather | 2015-10-15 03:07:35 UTC | 2015-10-15 03:07:35 UTC |
++----+-------------------+---------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :078 > Blog.second.posts
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+  Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| id | user_id | blog_id | title            | content         | created_at       | updated_at       |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| 1  | 1       | 2       | Why I am doin... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
+| 2  | 5       | 2       | What's the we... | Change to so... | 2015-10-15 03... | 2015-10-15 03... |
+| 3  | 1       | 2       | Tomorrow will... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+3 rows in set
+2.2.1 :079 > Blog.second.posts.users
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+NoMethodError:   Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
+undefined method `users' for #<Post::ActiveRecord_Associations_CollectionProxy:0x007f9592d0ea88>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:136:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:99:in `method_missing'
+	from (irb):79
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'2.2.1 :080 > 
+2.2.1 :081 >   Blog.second.posts.each do |t|
+2.2.1 :082 >     User.find(t.user_id)
+2.2.1 :083?>   end
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+  Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
+  User Load (0.1ms)  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  User Load (0.1ms)  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  User Load (0.1ms)  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| id | user_id | blog_id | title            | content         | created_at       | updated_at       |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| 1  | 1       | 2       | Why I am doin... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
+| 2  | 5       | 2       | What's the we... | Change to so... | 2015-10-15 03... | 2015-10-15 03... |
+| 3  | 1       | 2       | Tomorrow will... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+3 rows in set
+2.2.1 :084 > Blog.second
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
++----+-------------------+---------------+-------------------------+-------------------------+
+| id | name              | description   | created_at              | updated_at              |
++----+-------------------+---------------+-------------------------+-------------------------+
+| 2  | Flying in the sky | About weather | 2015-10-15 03:07:35 UTC | 2015-10-15 03:07:35 UTC |
++----+-------------------+---------------+-------------------------+-------------------------+
+1 row in set
+2.2.1 :085 > Blog.second.posts
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+  Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| id | user_id | blog_id | title            | content         | created_at       | updated_at       |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| 1  | 1       | 2       | Why I am doin... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
+| 2  | 5       | 2       | What's the we... | Change to so... | 2015-10-15 03... | 2015-10-15 03... |
+| 3  | 1       | 2       | Tomorrow will... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+3 rows in set
+2.2.1 :086 > Blog.second.posts.user_id
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+NoMethodError:   Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
+undefined method `user_id' for #<Post::ActiveRecord_Associations_CollectionProxy:0x007f9593493998>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:136:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:99:in `method_missing'
+	from (irb):86
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'2.2.1 :087 > 
+2.2.1 :088 >   Blog.second.posts
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+  Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| id | user_id | blog_id | title            | content         | created_at       | updated_at       |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| 1  | 1       | 2       | Why I am doin... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
+| 2  | 5       | 2       | What's the we... | Change to so... | 2015-10-15 03... | 2015-10-15 03... |
+| 3  | 1       | 2       | Tomorrow will... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+3 rows in set
+2.2.1 :089 > Blog.second.posts.user
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+NoMethodError:   Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
+undefined method `user' for #<Post::ActiveRecord_Associations_CollectionProxy:0x007f95933c0a48>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:136:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:99:in `method_missing'
+	from (irb):89
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'2.2.1 :090 > Blog.second.posts.users
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+NoMethodError:   Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
+undefined method `users' for #<Post::ActiveRecord_Associations_CollectionProxy:0x007f959334b478>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:136:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:99:in `method_missing'
+	from (irb):90
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'2.2.1 :091 > 
+2.2.1 :092 >   Blog.second.posts.user
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+NoMethodError:   Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
+undefined method `user' for #<Post::ActiveRecord_Associations_CollectionProxy:0x007f9592c0dda0>
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:136:in `method_missing'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activerecord-4.1.8/lib/active_record/relation/delegation.rb:99:in `method_missing'
+	from (irb):92
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:90:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/railties-4.1.8/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `block in require'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:247:in `require'
+	from /Users/Frank/Desktop/CodingDojo/Rails/rails_models/blog_post_message_2/bin/rails:8:in `<top (required)>'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `block in load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/activesupport-4.1.8/lib/active_support/dependencies.rb:241:in `load'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application.rb:125:in `run'
+	from /Users/Frank/.rvm/gems/ruby-2.2.1/gems/spring-1.4.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Frank/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'2.2.1 :093 > 
+2.2.1 :094 >   Blog.second.posts
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+  Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| id | user_id | blog_id | title            | content         | created_at       | updated_at       |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| 1  | 1       | 2       | Why I am doin... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
+| 2  | 5       | 2       | What's the we... | Change to so... | 2015-10-15 03... | 2015-10-15 03... |
+| 3  | 1       | 2       | Tomorrow will... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+3 rows in set
+2.2.1 :095 > Blog.second.posts.each do |p|
+2.2.1 :096 >     p.user
+2.2.1 :097?>   end
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1 OFFSET 1
+  Post Load (0.1ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."blog_id" = ?  [["blog_id", 2]]
+  User Load (0.1ms)  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  User Load (0.1ms)  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  User Load (0.1ms)  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| id | user_id | blog_id | title            | content         | created_at       | updated_at       |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+| 1  | 1       | 2       | Why I am doin... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
+| 2  | 5       | 2       | What's the we... | Change to so... | 2015-10-15 03... | 2015-10-15 03... |
+| 3  | 1       | 2       | Tomorrow will... | I don't know    | 2015-10-15 03... | 2015-10-15 03... |
++----+---------+---------+------------------+-----------------+------------------+------------------+
+3 rows in set
+2.2.1 :098 > Blog.first.owners
+  Blog Load (0.2ms)  SELECT  "blogs".* FROM "blogs"   ORDER BY "blogs"."id" ASC LIMIT 1
+  Owner Load (0.2ms)  SELECT "owners".* FROM "owners"  WHERE "owners"."blog_id" = ?  [["blog_id", 1]]
++----+---------+---------+-------------------------+-------------------------+
+| id | user_id | blog_id | created_at              | updated_at              |
++----+---------+---------+-------------------------+-------------------------+
+| 1  | 1       | 1       | 2015-10-15 03:13:15 UTC | 2015-10-15 03:13:15 UTC |
+| 6  | 3       | 1       | 2015-10-15 03:21:07 UTC | 2015-10-15 03:21:07 UTC |
++----+---------+---------+-------------------------+-------------------------+
+2 rows in set
+
